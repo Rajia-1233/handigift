@@ -11,12 +11,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 2px 5px rgba(190, 170, 170, 0.1);
 }
 
 .nav-logo {
-    color: #FF8FAB;
+    color: #75011e;
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -45,7 +45,7 @@
 .hero {
     position: relative;
     height: 70vh;
-    color: white;
+    color: rgb(255, 255, 255);
     overflow: hidden;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .btn {
-    background-color: #FF8FAB;
+    background-color: #000000;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -86,7 +86,7 @@
 }
 
 .btn:hover {
-    background-color: #ff7c9c;
+    background-color: #7706062d;
 }
 
 /* Icons Section */
@@ -95,7 +95,7 @@
     justify-content: center;
     gap: 4rem;
     padding: 2rem;
-    background-color: white;
+    background-color: rgb(243, 243, 243);
 }
 
 .icon-item {
@@ -122,7 +122,7 @@
 }
 
 .products h2 {
-    color: #FF8FAB;
+    color: #860223;
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -167,7 +167,7 @@
 }
 
 .product-info h3 {
-    color: #FF8FAB;
+    color: #830021;
     margin-bottom: 0.5rem;
 }
 
@@ -178,13 +178,13 @@
 
 /* Reviews Section */
 .reviews {
-    background-color: #FFF5F7;
+    background-color: #f3f3f3;
     padding: 4rem 2rem;
 }
 
 .reviews h2 {
     text-align: center;
-    color: #FF8FAB;
+    color: #72001c;
     margin-bottom: 3rem;
 }
 
@@ -209,7 +209,7 @@
 }
 
 .stars {
-    color: #FF8FAB;
+    color: #a00404;
     margin-bottom: 1rem;
 }
 
@@ -227,7 +227,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.9);
+    background: zrgba(255,255,255,0.9);
 }
 
 .newsletter-content {
@@ -239,14 +239,14 @@
 .newsletter input {
     width: 70%;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #e2e1e1;
     border-radius: 50px;
     margin-right: 1rem;
 }
 
 /* Footer */
 .footer {
-    background-color: #FFF5F7;
+    background-color: #f1f1f1;
     padding: 3rem 2rem;
 }
 
@@ -259,7 +259,7 @@
 }
 
 .footer h3 {
-    color: #FF8FAB;
+    color: #880022;
     margin-bottom: 1rem;
 }
 
@@ -278,7 +278,7 @@
 }
 
 .social-links span {
-    color: #FF8FAB;
+    color: #000000;
     cursor: pointer;
 }
 

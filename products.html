@@ -3,145 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - Sweet Handmade Gifts</title>
+    <title>Product - Handmade Gift</title>
     <style>
+        /* General reset and styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background-color: #FFF5F7;
-        }
-
-        .header {
-            background-color: #FFE5EC;
-            text-align: center;
-            padding: 30px;
-        }
-
-        .header h1 {
-            color: #eeabbd;
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 16px;
-        }
-
-        .nav {
-            background-color: white;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .nav a {
-            color: #FF8FAB;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .nav a:hover {
-            background-color: #FFE5EC;
+            background-color: #e7e7e7;
         }
 
         .product-page {
-            background-color: white;
-            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(245, 242, 242);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             display: flex;
-            justify-content: center;
-            gap: 50px;
+            flex-wrap: wrap;
         }
 
         .product-image {
-            max-width: 600px;
-            max-height: 400px;
-            margin-right: 40px;
+            flex: 1 1 50%;
+            padding: 2rem;
         }
 
-        .product-info {
-            max-width: 500px;
+        .product-image img {
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
         }
 
-        .product-info h2 {
-            color: #FF8FAB;
-            font-size: 36px;
-            margin-bottom: 15px;
+        .product-details {
+            flex: 1 1 50%;
+            padding: 2rem;
         }
 
-        .product-info p {
+        .product-details h1 {
+            font-size: 2rem;
+            color: #7a0000;
+            margin-bottom: 1rem;
+        }
+
+        .product-details p {
+            font-size: 1rem;
             color: #666;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
 
-        .product-info .price {
-            color: #FF8FAB;
-            font-size: 28px;
+        .product-details .price {
+            font-size: 1.5rem;
             font-weight: bold;
-            margin-bottom: 30px;
+            color: #7a0000;
+            margin-bottom: 2rem;
         }
 
-        .product-info .add-to-cart {
-            background-color: #FF8FAB;
-            color: white;
-            padding: 15px 30px;
-            font-size: 16px;
-            border-radius: 25px;
-            text-align: center;
+        .btn {
+            background-color: #3b2727;
+            color: rgb(59, 27, 27);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
-        .product-info .add-to-cart:hover {
-            background-color: #FF6B8F;
+        .btn:hover {
+            background-color: #720000;
         }
 
-        .footer {
-            background-color: #FFE5EC;
-            color: #666;
+        /* Related Products Section */
+        .related-products {
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 20px;
+        }
+
+        .related-products h2 {
+            color: #720000;
+            margin-bottom: 2rem;
+        }
+
+        .related-products .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background-color: rgb(248, 248, 248);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            color: #640505;
+            margin-bottom: 1rem;
+        }
+
+        .product-info p {
+            color: #3f0606;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-info .price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #3a1414;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-page {
+                flex-direction: column;
+            }
+
+            .product-image, .product-details {
+                flex: 1 1 100%;
+                padding: 1rem;
+            }
         }
     </style>
+    <link rel="stylesheet" href="./syles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Sweet Handmade Gifts</h1>
-        <p>Crafted with Love, Made for You</p>
-    </div>
+    <nav class="nav">
+        <div class="nav-logo">HandiG!fts</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="cart-icon">🛒</div>
+    </nav>
 
-    <div class="nav">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-
+    <!-- Product Page -->
     <div class="product-page">
+        <!-- Product Image -->
         <div class="product-image">
-            <img src="/api/placeholder/600/400" alt="Custom Polaroid Frame" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="/api/placeholder/600/400" alt="Handmade Product">
         </div>
-
-        <div class="product-info">
-            <h2>Custom Polaroids</h2>
-            <p>Capture your cherished memories in style with our Custom Polaroids. Each Polaroid is carefully designed and printed to add a touch of vintage charm to your special moments. Perfect for gifting or decorating your space.</p>
-            <div class="price">$25.00</div>
-            <div class="add-to-cart">Add to Cart</div>
+        <!-- Product Details -->
+        <div class="product-details">
+            <h1>Custom Polaroid Photo Frame</h1>
+            <p>Capture beautiful memories with our handmade custom polaroid photo frames. Each frame is crafted with love and care to preserve your moments in vintage style.</p>
+            <p class="price">$24.99</p>
+            <button class="btn">Add to Cart</button>
         </div>
     </div>
 
-    <div class="footer">
-        <p>© 2025 Sweet Handmade Gifts. All rights reserved.</p>
-    </div>
+    <!-- Related Products Section -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="/api/placeholder/300/300" alt="Product 1">
+                <div class="product-info">
+                    <h3>Resin Art</h3>
+                    <p>Unique, handcrafted resin art pieces to add color to your home.</p>
+                    <p class="price">$49.99</p>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="/api/placeholder/300/300" alt="Product 2">
+                <div class="product-info">
+                    <h3>Handmade Jewelry Box</h3>
+                    <p>Elegantly crafted jewelry boxes made with care and precision.</p>
+                    <p class="price">$54.99</p>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="/api/placeholder/300/300" alt="Product 3">
+                <div class="product-info">
+                    <h3>Gift Hampers</h3>
+                    <p>Curated hampers filled with delightful surprises for any occasion.</p>
+                    <p class="price">$79.99</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
